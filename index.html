@@ -13,20 +13,17 @@ background:linear-gradient(270deg,#ff9a9e,#fad0c4,#fbc2eb,#a6c1ee,#84fab0,#8fd3f
 background-size:1400% 1400%;
 animation:rainbow 20s ease infinite;
 }
-
 @keyframes rainbow{
 0%{background-position:0% 50%}
 50%{background-position:100% 50%}
 100%{background-position:0% 50%}
 }
-
 h1{
 background:#ff6b6b;
 color:white;
 padding:15px;
 margin:0;
 }
-
 button{
 padding:10px 18px;
 margin:6px;
@@ -37,7 +34,6 @@ color:white;
 cursor:pointer;
 font-size:16px;
 }
-
 section{
 display:none;
 background:white;
@@ -48,9 +44,7 @@ padding:20px;
 border-radius:20px;
 box-shadow:0 0 15px rgba(0,0,0,0.25);
 }
-
 #home{display:block;}
-
 .board{
 background:#1e272e;
 color:white;
@@ -60,15 +54,13 @@ border-radius:10px;
 min-height:180px;
 margin-top:10px;
 }
-
 .bigEmoji{
 font-size:120px;
 }
 </style>
 
 <!-- AdSense global script -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5939894562022422"
-crossorigin="anonymous"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5939894562022422" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -76,13 +68,13 @@ crossorigin="anonymous"></script>
 <h1>Kids Learning World</h1>
 
 <section id="home">
-<!-- Home Ad -->
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-5939894562022422"
      data-ad-slot="1000000001"
      data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
+     data-full-width-responsive="true"
+     data-adtest="on"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
 <h2>Select Activity</h2>
@@ -100,7 +92,8 @@ crossorigin="anonymous"></script>
      data-ad-client="ca-pub-5939894562022422"
      data-ad-slot="1000000002"
      data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
+     data-full-width-responsive="true"
+     data-adtest="on"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
 <h2>Alphabet Lesson</h2>
@@ -118,7 +111,8 @@ crossorigin="anonymous"></script>
      data-ad-client="ca-pub-5939894562022422"
      data-ad-slot="1000000003"
      data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
+     data-full-width-responsive="true"
+     data-adtest="on"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
 <h2>Animal Lesson</h2>
@@ -136,7 +130,8 @@ crossorigin="anonymous"></script>
      data-ad-client="ca-pub-5939894562022422"
      data-ad-slot="1000000004"
      data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
+     data-full-width-responsive="true"
+     data-adtest="on"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
 <h2>Colour Lesson</h2>
@@ -154,7 +149,8 @@ crossorigin="anonymous"></script>
      data-ad-client="ca-pub-5939894562022422"
      data-ad-slot="1000000005"
      data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
+     data-full-width-responsive="true"
+     data-adtest="on"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
 <h2>Shape Lesson</h2>
@@ -172,7 +168,8 @@ crossorigin="anonymous"></script>
      data-ad-client="ca-pub-5939894562022422"
      data-ad-slot="1000000006"
      data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
+     data-full-width-responsive="true"
+     data-adtest="on"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
 <h2>Multiplication Tables</h2>
@@ -202,7 +199,8 @@ crossorigin="anonymous"></script>
      style="display:block;height:150px"
      data-ad-client="ca-pub-5939894562022422"
      data-ad-slot="1000000007"
-     data-ad-format="rectangle"></ins>
+     data-ad-format="rectangle"
+     data-adtest="on"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
 <h2>Math Game</h2>
@@ -215,22 +213,15 @@ crossorigin="anonymous"></script>
 
 <script>
 let paused=false;
-function speak(text,callback){
-  let msg=new SpeechSynthesisUtterance(text)
-  msg.rate=0.5
-  msg.onend=function(){
-    if(!paused && callback){ callback() }
-  }
-  speechSynthesis.speak(msg)
-}
+function speak(text,callback){ let msg=new SpeechSynthesisUtterance(text); msg.rate=0.5; msg.onend=function(){ if(!paused && callback){ callback() } }; speechSynthesis.speak(msg) }
 function pauseLesson(){ paused=true; speechSynthesis.pause() }
 function resumeLesson(){ paused=false; speechSynthesis.resume() }
 function openPage(id){ speechSynthesis.cancel(); paused=false; document.querySelectorAll("section").forEach(s=>s.style.display="none"); document.getElementById(id).style.display="block"; }
 function goHome(){ speechSynthesis.cancel(); document.querySelectorAll("section").forEach(s=>s.style.display="none"); document.getElementById("home").style.display="block"; }
 
 /* ABC */
-let abc=[["A","Apple","🍎"],["B","Ball","⚽"],["C","Cat","🐱"],["D","Dog","🐶"],["E","Elephant","🐘"],["F","Fish","🐟"],["G","Grapes","🍇"],["H","Horse","🐴"],["I","Ice Cream","🍦"],["J","Jug","🏺"],["K","Kite","🪁"],["L","Lion","🦁"],["M","Monkey","🐒"],["N","Nest","🪺"],["O","Orange","🍊"],["P","Parrot","🦜"],["Q","Queen","👑"],["R","Rabbit","🐰"],["S","Sun","☀️"],["T","Tiger","🐯"],["U","Umbrella","☂️"],["V","Van","🚐"],["W","Watch","⌚"],["X","Xylophone","🎵"],["Y","Yak","🐂"],["Z","Zebra","🦓"]]
-let abcIndex=0
+let abc=[["A","Apple","🍎"],["B","Ball","⚽"],["C","Cat","🐱"],["D","Dog","🐶"],["E","Elephant","🐘"],["F","Fish","🐟"],["G","Grapes","🍇"],["H","Horse","🐴"],["I","Ice Cream","🍦"],["J","Jug","🏺"],["K","Kite","🪁"],["L","Lion","🦁"],["M","Monkey","🐒"],["N","Nest","🪺"],["O","Orange","🍊"],["P","Parrot","🦜"],["Q","Queen","👑"],["R","Rabbit","🐰"],["S","Sun","☀️"],["T","Tiger","🐯"],["U","Umbrella","☂️"],["V","Van","🚐"],["W","Watch","⌚"],["X","Xylophone","🎵"],["Y","Yak","🐂"],["Z","Zebra","🦓"]];
+let abcIndex=0;
 function startABC(){ speechSynthesis.cancel(); abcIndex=0; nextABC(); }
 function nextABC(){ if(paused) return; if(abcIndex>=abc.length) return; let a=abc[abcIndex]; document.getElementById("abcBoard").innerHTML="<h1>"+a[0]+" for "+a[1]+"</h1><div class='bigEmoji'>"+a[2]+"</div>"; speak(a[0]+" for "+a[1],function(){ abcIndex++; nextABC(); }); }
 
@@ -263,5 +254,6 @@ function newQuestion(){ num1=Math.floor(Math.random()*10)+1; num2=Math.floor(Mat
 function checkAnswer(){ let ans=parseInt(document.getElementById("answer").value); if(ans===correct){ speak("Excellent! Correct answer."); }else{ speak("Let's solve it together.",function(){ speak(num1+" plus "+num2+" equals "+correct); }); } newQuestion(); }
 newQuestion();
 </script>
+
 </body>
 </html>
