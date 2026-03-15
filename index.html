@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kids Learning World</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body{
+margin:0;
+font-family:Comic Sans MS;
+text-align:center;
+background:linear-gradient(270deg,#ff9a9e,#fad0c4,#fbc2eb,#a6c1ee,#84fab0,#8fd3f4,#fccb90);
+background-size:1400% 1400%;
+animation:rainbow 20s ease infinite;
+}
+
+@keyframes rainbow{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+
+h1{
+background:#ff6b6b;
+color:white;
+padding:15px;
+margin:0;
+}
+
+button{
+padding:10px 18px;
+margin:6px;
+border:none;
+border-radius:10px;
+background:#4CAF50;
+color:white;
+cursor:pointer;
+font-size:16px;
+}
+
+section{
+display:none;
+background:white;
+margin:20px auto;
+width:92%;
+max-width:900px;
+padding:20px;
+border-radius:20px;
+box-shadow:0 0 15px rgba(0,0,0,0.25);
+}
+
+#home{display:block;}
+
+.board{
+background:#1e272e;
+color:white;
+font-size:28px;
+padding:20px;
+border-radius:10px;
+min-height:180px;
+margin-top:10px;
+}
+
+.bigEmoji{
+font-size:120px;
+}
+</style>
+
+<!-- AdSense global script -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5939894562022422"
+crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<h1>Kids Learning World</h1>
+
+<section id="home">
+<!-- Home Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5939894562022422"
+     data-ad-slot="1000000001"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+<h2>Select Activity</h2>
+<button onclick="openPage('abc')">ABC</button>
+<button onclick="openPage('animals')">Animals</button>
+<button onclick="openPage('colors')">Colours</button>
+<button onclick="openPage('shapes')">Shapes</button>
+<button onclick="openPage('tables')">Tables</button>
+<button onclick="openPage('math')">Math Game</button>
+</section>
+
+<section id="abc">
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5939894562022422"
+     data-ad-slot="1000000002"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+<h2>Alphabet Lesson</h2>
+<div class="board" id="abcBoard"></div>
+<button onclick="startABC()">Start</button>
+<button onclick="pauseLesson()">Pause</button>
+<button onclick="resumeLesson()">Resume</button>
+<br><br>
+<button onclick="goHome()">Back</button>
+</section>
+
+<section id="animals">
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5939894562022422"
+     data-ad-slot="1000000003"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+<h2>Animal Lesson</h2>
+<div class="board" id="animalBoard"></div>
+<button onclick="startAnimals()">Start</button>
+<button onclick="pauseLesson()">Pause</button>
+<button onclick="resumeLesson()">Resume</button>
+<br><br>
+<button onclick="goHome()">Back</button>
+</section>
+
+<section id="colors">
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5939894562022422"
+     data-ad-slot="1000000004"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+<h2>Colour Lesson</h2>
+<div class="board" id="colorBoard"></div>
+<button onclick="startColors()">Start</button>
+<button onclick="pauseLesson()">Pause</button>
+<button onclick="resumeLesson()">Resume</button>
+<br><br>
+<button onclick="goHome()">Back</button>
+</section>
+
+<section id="shapes">
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5939894562022422"
+     data-ad-slot="1000000005"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+<h2>Shape Lesson</h2>
+<div class="board" id="shapeBoard"></div>
+<button onclick="startShapes()">Start</button>
+<button onclick="pauseLesson()">Pause</button>
+<button onclick="resumeLesson()">Resume</button>
+<br><br>
+<button onclick="goHome()">Back</button>
+</section>
+
+<section id="tables">
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5939894562022422"
+     data-ad-slot="1000000006"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+<h2>Multiplication Tables</h2>
+<select id="tableNumber">
+<option value="1">Table of 1</option>
+<option value="2">Table of 2</option>
+<option value="3">Table of 3</option>
+<option value="4">Table of 4</option>
+<option value="5">Table of 5</option>
+<option value="6">Table of 6</option>
+<option value="7">Table of 7</option>
+<option value="8">Table of 8</option>
+<option value="9">Table of 9</option>
+<option value="10">Table of 10</option>
+</select>
+<br><br>
+<div class="board" id="tableBoard"></div>
+<button onclick="startTable()">Start</button>
+<button onclick="pauseLesson()">Pause</button>
+<button onclick="resumeLesson()">Resume</button>
+<br><br>
+<button onclick="goHome()">Back</button>
+</section>
+
+<section id="math">
+<ins class="adsbygoogle"
+     style="display:block;height:150px"
+     data-ad-client="ca-pub-5939894562022422"
+     data-ad-slot="1000000007"
+     data-ad-format="rectangle"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+<h2>Math Game</h2>
+<div id="question"></div>
+<input id="answer">
+<button onclick="checkAnswer()">Submit</button>
+<br><br>
+<button onclick="goHome()">Back</button>
+</section>
+
+<script>
+let paused=false;
+function speak(text,callback){
+  let msg=new SpeechSynthesisUtterance(text)
+  msg.rate=0.5
+  msg.onend=function(){
+    if(!paused && callback){ callback() }
+  }
+  speechSynthesis.speak(msg)
+}
+function pauseLesson(){ paused=true; speechSynthesis.pause() }
+function resumeLesson(){ paused=false; speechSynthesis.resume() }
+function openPage(id){ speechSynthesis.cancel(); paused=false; document.querySelectorAll("section").forEach(s=>s.style.display="none"); document.getElementById(id).style.display="block"; }
+function goHome(){ speechSynthesis.cancel(); document.querySelectorAll("section").forEach(s=>s.style.display="none"); document.getElementById("home").style.display="block"; }
+
+/* ABC */
+let abc=[["A","Apple","🍎"],["B","Ball","⚽"],["C","Cat","🐱"],["D","Dog","🐶"],["E","Elephant","🐘"],["F","Fish","🐟"],["G","Grapes","🍇"],["H","Horse","🐴"],["I","Ice Cream","🍦"],["J","Jug","🏺"],["K","Kite","🪁"],["L","Lion","🦁"],["M","Monkey","🐒"],["N","Nest","🪺"],["O","Orange","🍊"],["P","Parrot","🦜"],["Q","Queen","👑"],["R","Rabbit","🐰"],["S","Sun","☀️"],["T","Tiger","🐯"],["U","Umbrella","☂️"],["V","Van","🚐"],["W","Watch","⌚"],["X","Xylophone","🎵"],["Y","Yak","🐂"],["Z","Zebra","🦓"]]
+let abcIndex=0
+function startABC(){ speechSynthesis.cancel(); abcIndex=0; nextABC(); }
+function nextABC(){ if(paused) return; if(abcIndex>=abc.length) return; let a=abc[abcIndex]; document.getElementById("abcBoard").innerHTML="<h1>"+a[0]+" for "+a[1]+"</h1><div class='bigEmoji'>"+a[2]+"</div>"; speak(a[0]+" for "+a[1],function(){ abcIndex++; nextABC(); }); }
+
+/* ANIMALS */
+let animals=[["Dog","🐶","woof"],["Cat","🐱","meow"],["Lion","🦁","roar"],["Cow","🐮","moo"],["Elephant","🐘","trumpet"],["Tiger","🐯","growl"]];
+let animalIndex=0;
+function startAnimals(){ speechSynthesis.cancel(); animalIndex=0; nextAnimal(); }
+function nextAnimal(){ if(paused) return; if(animalIndex>=animals.length) return; let a=animals[animalIndex]; document.getElementById("animalBoard").innerHTML="<h1>"+a[0]+"</h1><div class='bigEmoji'>"+a[1]+"</div>"; speak("This is a "+a[0],function(){ speak(a[0]+" says "+a[2],function(){ animalIndex++; nextAnimal(); }); }); }
+
+/* COLORS */
+let colors=[["Red","#ff0000"],["Blue","#2196F3"],["Green","#4CAF50"],["Yellow","#FFD600"],["Orange","#ff9800"],["Purple","#9c27b0"]];
+let colorIndex=0;
+function startColors(){ speechSynthesis.cancel(); colorIndex=0; nextColor(); }
+function nextColor(){ if(paused) return; if(colorIndex>=colors.length) return; let c=colors[colorIndex]; document.getElementById("colorBoard").innerHTML="<h1>"+c[0]+"</h1><div style='width:120px;height:80px;background:"+c[1]+";margin:auto'></div>"; speak("This colour is "+c[0],function(){ colorIndex++; nextColor(); }); }
+
+/* SHAPES */
+let shapes=[["Circle","⚪"],["Square","⬜"],["Triangle","🔺"],["Star","⭐"],["Heart","❤️"],["Diamond","🔷"]];
+let shapeIndex=0;
+function startShapes(){ speechSynthesis.cancel(); shapeIndex=0; nextShape(); }
+function nextShape(){ if(paused) return; if(shapeIndex>=shapes.length) return; let s=shapes[shapeIndex]; document.getElementById("shapeBoard").innerHTML="<div class='bigEmoji'>"+s[1]+"</div><h1>"+s[0]+"</h1>"; speak("This shape is "+s[0],function(){ shapeIndex++; nextShape(); }); }
+
+/* TABLES */
+let tableNum, tableIndex;
+function startTable(){ speechSynthesis.cancel(); tableNum=parseInt(document.getElementById("tableNumber").value); tableIndex=1; nextTable(); }
+function nextTable(){ if(paused) return; if(tableIndex>10) return; let result=tableNum*tableIndex; document.getElementById("tableBoard").innerHTML="<h1>"+tableNum+" × "+tableIndex+" = "+result+"</h1>"; speak(tableNum+" times "+tableIndex+" equals "+result,function(){ tableIndex++; nextTable(); }); }
+
+/* MATH GAME */
+let num1,num2,correct;
+function newQuestion(){ num1=Math.floor(Math.random()*10)+1; num2=Math.floor(Math.random()*10)+1; correct=num1+num2; document.getElementById("question").innerText=num1+" + "+num2+" = ?"; }
+function checkAnswer(){ let ans=parseInt(document.getElementById("answer").value); if(ans===correct){ speak("Excellent! Correct answer."); }else{ speak("Let's solve it together.",function(){ speak(num1+" plus "+num2+" equals "+correct); }); } newQuestion(); }
+newQuestion();
+</script>
+</body>
+</html>
